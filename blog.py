@@ -1,4 +1,3 @@
-# https://www.youtube.com/watch?v=VI9mOrRiea4
 
 from flask import Flask, render_template, request
 # 'render_template' renders templates and 'request' handles http requests
@@ -7,36 +6,22 @@ import sqlite3
 
 app = Flask(__name__)
 
-# connecting application to the database
-connection = sqlite3.connect('database.db')
-print('Database opened successfully')
-
-# execute database commands
-connection.execute('CREATE TABLE IF NOT EXISTS posts (title TEXT, post TEXT)')
-print('Table created successfully')
-
-# close database connection
-connection.close()
-
 @app.route('/')
-def hello_world():
-    return "Hello World!"
+def home():
+    return render_template('home.html')
 
-# Rendering a template:
-@app.route('/new')
-def new_post():
-    return render_template('new.html')
-
-@app.route('/addrecord', methods = ['POST'])
-def addrecord():
+@app.route('/movie', methods = ['POST'])
+def movie():
     connection = sqlite3.connect('database.db')
+    print('Database opened successfully')
     # cursor lets us write in the database
     cursor = connection.cursor()
 
     try:
         title = request.form['title']
-        post = request.form['post']
-        cursor.execute('INSERT INTO posts (title,post) VALUES (?,?)', (title,post))
+        year = request.form['year']
+        genre = request.form['genre']
+        cursor.execute('INSERT INTO movies (title,year,genre) VALUES (?,?,?)', (title,year,genre))
         connection.commit()
         message = "Record successfuly added"
     except:

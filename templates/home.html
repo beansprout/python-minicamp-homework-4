@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Welcome to the Movie Database</h1>
+    <form action='{{ url_for('movie')}}' method='POST' >
+  <!-- The above version allows for the path of addrecord to change -->
+  <!-- <form action = '/addrecord' method = 'POST'> -->
+    <h3>Add to the Database</h3>
+    <p>Title</p>
+    <input type="text" name = "title">
+    <br>
+    <p>Year</p>
+    <input type="integer" name = "year">
+    <br>
+    <p>Genre</p>
+    <input type="text" name ="genre">
+    <input type="submit" value="submit">
+    <br>
+    </form>
+  </body>
+</html>
