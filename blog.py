@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 # 'render_template' renders templates and 'request' handles http requests
 
 import sqlite3
@@ -30,6 +30,15 @@ def movie():
     finally:
         return render_template('result.html', message = message)
         connection.close()
+
+@app.route('/movies')
+def movies():
+        connection = sqlite3.connect('database.db')
+        cursor = connection.cursor()
+        cursor.execute('SELECT * FROM movies')
+        moviesList = cursor.fetchall()
+        connection.close()
+        return jsonify(moviesList)
 
 if __name__ == '__main__':
     app.run(debug = True)

@@ -1,18 +1,18 @@
-# Homework #4 - 
+# Homework #4 -
 
 ## Instructions
 ---
-1. Install Git  [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+[x] 1. Install Git  [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 
 
-2. Create a Github account - it's free.
+[x] 2. Create a Github account - it's free.
 
 
 
-3. Fork [this](https://github.com/SunJieMing/python-minicamp-homework-4) repo and clone it to your computer using the terminal command `git clone <url>`.  Navigate into the cloned folder and build your homework project there.
+[x] 3. Fork [this](https://github.com/SunJieMing/python-minicamp-homework-4) repo and clone it to your computer using the terminal command `git clone <url>`.  Navigate into the cloned folder and build your homework project there.
 
-4. As you make changes and decide to commit your code follow these commands:
+[x] 4. As you make changes and decide to commit your code follow these commands:
 
 	```
     git status //You'll see all of the files you've changed show up in red
@@ -22,8 +22,8 @@
     git status //All of the file names should no longer appear
     git push origin master //This pushes your changes up to the cloud
 	```
-    
-5. Setup your virtual environment and build a simple Flask API with three routes:
+
+[x] 5. Setup your virtual environment and build a simple Flask API with three routes:
 
 	* (`/`) - This route should return your base HTML file.
     * (`/movie`) - This route should accept a POST request and save some info about a movie to your sqlite database.
@@ -31,21 +31,21 @@
     * You can verify that you are successfully adding data by uploading your database file [here](http://inloop.github.io/sqlite-viewer/).
 
 
-6. Create a `/static` folder with a `/styles` folder inside and a `styles.css` inside of the `/styles` folder.  (`/static/styles/styles.css`)  Create a `/templates` folder with a `home.html` file.  Create a form to submit movie data to your API.  Link the stylesheet to your home template and customize the look and feel of your application.
+[] 6. Create a `/static` folder with a `/styles` folder inside and a `styles.css` inside of the `/styles` folder.  (`/static/styles/styles.css`)  Create a `/templates` folder with a `home.html` file.  Create a form to submit movie data to your API.  Link the stylesheet to your home template and customize the look and feel of your application.
 
 
 ---
 
 ### Extra Credit
 
-1. Add a (`/search`) route to retrieve a specific movie from the database.  This will be very similar to the extra credit from the homework for day 3.
+[] 1. Add a (`/search`) route to retrieve a specific movie from the database.  This will be very similar to the extra credit from the homework for day 3.
 
 
 
-2. Fork, clone and run Homework #3's solution branch in the repo.  `git pull origin solution`
+[] 2. Fork, clone and run Homework #3's solution branch in the repo.  `git pull origin solution`
 
 
-3. Continue to play around with building your own routes and think of different ways you can interact with the database.  We will be moving on to more client side coding after this and will be cloning down prebuilt servers for future homework assignments.
+[] 3. Continue to play around with building your own routes and think of different ways you can interact with the database.  We will be moving on to more client side coding after this and will be cloning down prebuilt servers for future homework assignments.
 
 
 ---
